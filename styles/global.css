@@ -1,0 +1,6 @@
+@import './reset.css';
+@import './mobile.css';
+@import './desktop.css';
+html{
+    background: #fefbff;
+}

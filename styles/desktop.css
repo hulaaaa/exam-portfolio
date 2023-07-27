@@ -1,0 +1,196 @@
+nav.nav{
+    padding: 40px 90px 40px 90px;
+    border-bottom: 1px solid var(--neutral-600, #4B5563);
+}
+.nav-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+}
+h1.nav-block_heading-text{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+h1.nav-block_cv-text{
+    color: #831ED2;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+}
+.nav-block_menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+}
+.nav-block_menu-text{
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+.nav-block_menu img{
+    width: 24px;
+    height: 24px;
+}
+
+
+header.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 90px;
+    padding-top: 140px;
+    height: calc(100vh - 114px);
+    background-image: url('../assets/Loader\ -\ Desktopbg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:40%;
+}
+.header-main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+}
+.header-main_left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-grow: 1;
+
+}
+.header-main_left-head{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+.header-main_left-head-line{
+    width: 39.051px;
+    height: 3px;
+    background: #000;
+    border-radius: 10px;
+}
+.header-main_left-head-text{
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.header-main_right{
+    display: flex;
+    flex-direction: column;
+}
+.header-main_right-text{
+    width: 486px;
+    color: #000;
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.header-main_left-headingText{
+    color: #000;
+    font-family: Vollkorn;
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:100%; 
+}
+
+.select-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.select-menu hr{
+    width: 100vw;
+    height: 1px;
+    background: rgb(0, 0, 0, 0.10);
+}
+.select-menu_tabs{
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+.select-menu_tab{
+    display: flex;
+    height: 47px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.select-menu_tab_actived {
+    display: flex;
+    height: 47px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #000;
+}
+.select-menu_tab {
+    display: flex;
+    height: 47px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.select-menu_tab_actived h3{
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+.select-menu_tab h3{
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bio {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.bio h1{
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    color: #000;
+    font-family: Manrope;
+    font-size: 16.472px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.bio a{
+    color: #000;
+}
+
