@@ -3,4 +3,5 @@
 @import './desktop.css';
 html{
     background: #fefbff;
+    overflow-x: hidden;
 }

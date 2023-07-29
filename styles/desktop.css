@@ -274,7 +274,9 @@ main.main{
 }
 .main-project_page img{
     width: 100%;
-    height: 100%;
+    object-fit: cover;
+
+    height: 250px;
     background:lightgray 50% / cover no-repeat;
 }
 .main-project_page-text{
@@ -345,4 +347,15 @@ main.main{
     font-style: normal;
     font-weight: 400;
     text-decoration-line: underline;
+}
+
+.alertify-notifier {
+    color: white ;
+    font-family: Vollkorn;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+}
+.alertify-notifier .ajs-message.ajs-success{
+    background: #831ED2 ;
 }

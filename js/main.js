@@ -6,22 +6,22 @@ const arrProject = {
             '3'
         ],
         [
-            '../assets/image 3.png',
-            'Project1',
-            'type1',
-            'Funny App'
+            '../assets/6.jpg',
+            'Nike Clone Website',
+            'lorem',
+            'Develop Web'
         ],
         [
-            '../assets/image 3.png',
-            'Project2',
-            'type2',
-            'Fintech'
+            '../assets/7.jpg',
+            'Paris Website',
+            'lorem',
+            'Develop Web'
         ],
         [
-            '../assets/image 4.png',
-            'Project3',
-            'type3',
-            'Music App'
+            '../assets/5.jpg',
+            'Travel Website',
+            'lorem',
+            'Develop Web'
         ]
     ],
     web:[
@@ -31,22 +31,22 @@ const arrProject = {
             '3'
         ],
         [
-            '../assets/image 4.png',
-            'WebProject1',
-            'Apptype1',
-            'Funny App Web'
+            '../assets/1.jpg',
+            'Weather App',
+            'Search weather in your city',
+            'Web Application'
         ],
         [
-            '../assets/image 4.png',
-            'WebProject2',
-            'Apptype2',
-            'Fintech Web'
+            '../assets/2.jpg',
+            'Music App',
+            'Listen your favorite music',
+            'Web Application'
         ],
         [
-            '../assets/image 3.png',
-            'WebProject3',
-            'Apptype3',
-            'Music App Web'
+            '../assets/3.jpg',
+            'Todo List App',
+            'Just notation your plan',
+            'Web Application'
         ]
     ]
 }
@@ -103,5 +103,25 @@ for (let item of tabMenu) {
             tabMenu[1].className = ``
             tabMenu[1].className = 'select-menu_tab_actived'
         }
+    })
+}
+
+
+document.querySelector('.nav-block_cv-text').addEventListener('click',()=>{
+    alertify.set('notifier','delay', 2);
+
+    alertify.notify('Loading file', 'success');
+    fetchFile('../assets/1.jpg')
+})
+function fetchFile(url) {
+    fetch(url).then(res => res.blob()).then(file => {
+        let tempUrl = URL.createObjectURL(file);
+        const aTag = document.createElement("a");
+        aTag.href = tempUrl;
+        aTag.download = url.replace(/^.*[\\\/]/, '');
+        document.body.appendChild(aTag);
+        aTag.click();
+        URL.revokeObjectURL(tempUrl);
+        aTag.remove();
     })
 }
