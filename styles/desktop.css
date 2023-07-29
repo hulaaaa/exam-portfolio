@@ -112,6 +112,7 @@ header.header{
     line-height:100%; 
 }
 
+
 .select-menu{
     display: flex;
     flex-direction: column;
@@ -138,6 +139,7 @@ header.header{
     flex-shrink: 0;
 }
 .select-menu_tab_actived {
+    cursor: pointer;
     display: flex;
     height: 47px;
     padding: 10px;
@@ -148,6 +150,7 @@ header.header{
     border-bottom: 1px solid #000;
 }
 .select-menu_tab {
+    cursor: pointer;
     display: flex;
     height: 47px;
     padding: 10px;
@@ -170,6 +173,7 @@ header.header{
     font-style: normal;
     font-weight: 400;
 }
+
 
 .bio {
     position: absolute;
@@ -194,3 +198,151 @@ header.header{
     color: #000;
 }
 
+
+main.main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+}
+.main-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+.main-nav_text{
+    color: #000;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+}
+.main-nav_tabs{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+.main-nav_tab{
+    cursor: pointer;
+    display: flex;
+    height: 26px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 18px;
+    border: 1px solid var(--dark-mode-dk-400, #565656);
+}
+.main-nav_tab_active{
+    cursor: pointer;
+    display: flex;
+    height: 26px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 18px;
+    background: var(--dark-mode-dk-400, #565656);
+}
+.main-nav_tab_text_active{
+    color: var(--dark-mode-lt-10, #DDD);
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.main-nav_tab_text{
+    color: var(--dark-mode-dk-400, #565656);
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.main-project{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+.main-project_page{
+    display: flex;
+    width: 50%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.main-project_page img{
+    width: 100%;
+    height: 100%;
+    background:lightgray 50% / cover no-repeat;
+}
+.main-project_page-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.main-project_page-textarea{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.main-project_page-textarea h1{
+    color: #000;
+    font-family: Vollkorn;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+}
+.main-project_page-textarea p{
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.main-project_page-text-btn{
+    display: flex;
+    height: 26px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 18px;
+    border: 1px solid var(--dark-mode-dk-400, #565656); 
+}
+.main-project_page-text-btn h1{
+    color: var(--dark-mode-dk-400, #565656);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.footer{ 
+    
+    display: flex;
+    width: 100%;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--neutral-600, #4B5563);
+}
+.footer-text{
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+.footer-text a{
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration-line: underline;
+}
