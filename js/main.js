@@ -52,10 +52,33 @@ const arrProject = {
 }
 let divMain = document.querySelector('.main-project');
 let tabMenu = document.querySelectorAll('#select-menu_tab');
-
+let loadingText = document.querySelector('.loading-text')
 
 window.onload = () =>{
+    function fadeOut(element, opacity) {
+        if (opacity <= 0) {
+            element.style.display = 'none';
+        } 
+        else {
+            element.style.opacity = opacity;
+            setTimeout(() => {
+                fadeOut(element, opacity - 0.01);
+            }, 5);
+        }
+    }
+    loadingPage();
+    setTimeout(() => {
+        const loadingDiv = document.querySelector('.loading');
+        fadeOut(loadingDiv, 1);
+    },1800);
     renderProject(arrProject.site)
+}
+function loadingPage() {
+    gsap.to(loadingText , { 
+        duration: 2, 
+        text: "Hi, I'm Hula",
+        ease: 'none'
+    });
 }
 function renderProject(arrT) {
     divMain.innerHTML = ``
@@ -109,7 +132,6 @@ for (let item of tabMenu) {
 
 document.querySelector('.nav-block_cv-text').addEventListener('click',()=>{
     alertify.set('notifier','delay', 2);
-
     alertify.notify('Loading file', 'success');
     fetchFile('../assets/1.jpg')
 })
