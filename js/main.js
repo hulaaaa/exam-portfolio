@@ -53,19 +53,34 @@ const arrProject = {
 let divMain = document.querySelector('.main-project');
 let tabMenu = document.querySelectorAll('#select-menu_tab');
 let loadingText = document.querySelector('.loading-text')
+function fadeOut(element, opacity) {
+    if (opacity <= 0) {
+        document.querySelector('.bio').style.display = 'flex'
+        element.style.display = 'none';
+    } 
+    else {
+        element.style.opacity = opacity;
+        setTimeout(() => {
+            fadeOut(element, opacity - 0.01);
+        }, 4);
+    }
+}
+function fadeIn(element, opacity) {
+    if (opacity >= 1) {
+        element.style.opacity = 1;
+        document.querySelector('.bio').style.display = 'none'
+
+        element.style.display = 'flex';
+    } else {
+        element.style.display = 'flex';
+        element.style.opacity = opacity;
+        setTimeout(() => {
+            fadeIn(element, opacity + 0.01);
+        }, 4);
+    }
+}
 
 window.onload = () =>{
-    function fadeOut(element, opacity) {
-        if (opacity <= 0) {
-            element.style.display = 'none';
-        } 
-        else {
-            element.style.opacity = opacity;
-            setTimeout(() => {
-                fadeOut(element, opacity - 0.01);
-            }, 5);
-        }
-    }
     loadingPage();
     setTimeout(() => {
         const loadingDiv = document.querySelector('.loading');
@@ -74,6 +89,7 @@ window.onload = () =>{
     renderProject(arrProject.site)
 }
 function loadingPage() {
+    document.querySelector('.bio').style.display = 'none'
     gsap.to(loadingText , { 
         duration: 2, 
         text: "Hi, I'm Hula",
@@ -147,3 +163,36 @@ function fetchFile(url) {
         aTag.remove();
     })
 }
+let btnCloseMenu = document.querySelector('.menu-close'),
+menuDiv = document.querySelector('.menu');
+btnCloseMenu.addEventListener('click',()=>{
+    setTimeout(() => {
+        let menuDiv = document.querySelector('.menu');
+        fadeOut(menuDiv, 1);
+        document.querySelector('.bio').style.display = 'flex'
+    },250);
+    
+    document.querySelector('.kursor').style.border = '2px solid black'
+    document.querySelector('.kursorChild').style.backgroundColor = 'black'
+
+})
+let openMenu = document.querySelector('.nav-block_menu')
+openMenu.addEventListener('click',()=>{
+    setTimeout(() => {
+        let menuDiv = document.querySelector('.menu');
+        fadeIn(menuDiv, 0);
+    },250);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+

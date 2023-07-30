@@ -11,106 +11,181 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link rel="stylesheet" href="styles/global.css">
     <title>Portfolio - Hula Dm.</title>
 </head>
 <body>
-    <div class="loading">
-        <h1 class="loading-text"></h1>
-    </div>
-
-
-    <div class="bio">
-        <a href="#">
-            <h1 id="folotext"></h1>
-        </a>
-        <a href="#">
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="#">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="#">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-    </div>
-
-
-    <nav class="nav">
-        <div class="nav-block">
-            <a href="#" class="nav-block_heading">
-                <h1 class="nav-block_heading-text">.hula</h1>   
-            </a>
-
-            <a href="#" class="nav-block_cv">
-                <h1 class="nav-block_cv-text">Download CV</h1>   
-            </a>
-
-            <div class="nav-block_menu">
-                <h1 class="nav-block_menu-text">Menu</h1>
-                <img src="./assets/Icon.svg" alt="d">
+    <div class="scroll-container" id="scroll-container">
+        
+        <div class="loading">
+            <h1 class="loading-text"></h1>
+        </div>
+    
+    
+        <div class="menu">
+            <div class="menu-close">
+                <p class="menu-close_text">Close</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M3 29L29 3M3 3L29 29" stroke="white" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="menu-main">
+                <div class="menu-main_left">
+                    <h1 class="menu-main_left-text">Talks</h1>
+                    <h1 class="menu-main_left-text">About me</h1>
+                    <h1 class="menu-main_left-text">Community</h1>
+                </div>
+                <div class="menu-main_right">
+                    <h5 class="menu-main_right-text">Contact info</h5>
+                    <div class="menu-main_right-text-div">
+                        <p>Email</p>
+                        <p>Telegram</p>
+                        <p>Website</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-
-    <header class="header">
-        <div class="header-main">
-            <div class="header-main_left">
-                <div class="header-main_left-head">
-                    <div class="header-main_left-head-line"></div>
-                    <h1 class="header-main_left-head-text">
-                        Hi, I am Dmytro Hula
+    
+    
+        <div class="bio">
+            <a href="#">
+                <h1 id="folotext"></h1>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    
+    
+        <nav class="nav">
+            <div class="nav-block">
+                <a href="#" class="nav-block_heading">
+                    <h1 class="nav-block_heading-text">.hula</h1>   
+                </a>
+    
+                <a href="#" class="nav-block_cv">
+                    <h1 class="nav-block_cv-text">Download CV</h1>   
+                </a>
+    
+                <div class="nav-block_menu">
+                    <h1 class="nav-block_menu-text">Menu</h1>
+                    <img src="./assets/Icon.svg" alt="d">
+                </div>
+            </div>
+        </nav>
+    
+    
+        <header class="header">
+            <div class="header-main">
+                <div class="header-main_left">
+                    <div class="header-main_left-head">
+                        <div class="header-main_left-head-line"></div>
+                        <h1 class="header-main_left-head-text">
+                            Hi, I am Dmytro Hula
+                        </h1>
+                    </div>
+                    <h1 class="header-main_left-headingText">
+                        JS, CSS, HTML <br> jQuery
                     </h1>
                 </div>
-                <h1 class="header-main_left-headingText">
-                    JS, CSS, HTML <br> jQuery
-                </h1>
-            </div>
-            <div class="header-main_right">
-                <div class="header-main_right-line"></div>
-                <h1 class="header-main_right-text">I create inclusive, accessible digital products, I have experience in creating web applications. I believe in using product design and development as a tool to improve human interaction with technology at this scale.</h1>
-            </div>
-        </div>
-        <div class="select-menu">
-            <div class="select-menu_tabs">
-                <div class="select-menu_tab_actived" id="select-menu_tab">
-                    <h3 id="site">Site</h3>
-                </div>
-                <div class="select-menu_tab" id="select-menu_tab">
-                    <h3 id="web">Web Application</h3>
+                <div class="header-main_right">
+                    <div class="header-main_right-line"></div>
+                    <h1 class="header-main_right-text">I create inclusive, accessible digital products, I have experience in creating web applications. I believe in using product design and development as a tool to improve human interaction with technology at this scale.</h1>
                 </div>
             </div>
-            <hr>
-        </div>
-    </header>
-
-
-    <main class="main">
-        <!-- <div class="main-nav">
-            <h1 class="main-nav_text">Filter by Industry:</h1>
-            <div class="main-nav_tabs">
-                <div class="main-nav_tab">
-                    <h1 class="main-nav_tab_text">Fintech</h1>
+            <div class="select-menu">
+                <div class="select-menu_tabs">
+                    <div class="select-menu_tab_actived" id="select-menu_tab">
+                        <h3 id="site">Site</h3>
+                    </div>
+                    <div class="select-menu_tab" id="select-menu_tab">
+                        <h3 id="web">Web Application</h3>
+                    </div>
                 </div>
-                <div class="main-nav_tab">
-                    <h1 class="main-nav_tab_text">Edutech</h1>
-                </div>
-                <div class="main-nav_tab">
-                    <h1 class="main-nav_tab_text">Funny App</h1>
-                </div>
+                <hr>
             </div>
-        </div> -->
-        <div class="main-project">
-            
-        </div>
-    </main>
+        </header>
+    
+    
+        <main class="main">
+            <!-- <div class="main-nav">
+                <h1 class="main-nav_text">Filter by Industry:</h1>
+                <div class="main-nav_tabs">
+                    <div class="main-nav_tab">
+                        <h1 class="main-nav_tab_text">Fintech</h1>
+                    </div>
+                    <div class="main-nav_tab">
+                        <h1 class="main-nav_tab_text">Edutech</h1>
+                    </div>
+                    <div class="main-nav_tab">
+                        <h1 class="main-nav_tab_text">Funny App</h1>
+                    </div>
+                </div>
+            </div> -->
+            <div class="main-project">
+                
+            </div>
+        </main>
+    
+    
+        <footer class="footer">
+            <h1 class="footer-text">Designer & developer by <a href="#">Dm. Hula</a></h1>
+        </footer>
+    </div>
+    
+      <div class="scrollbar" id="scrollbar">
+        <div class="thumb" id="thumb"></div>
+      </div>
 
 
-    <footer class="footer">
-        <h1 class="footer-text">Designer & developer by <a href="#">Dm. Hula</a></h1>
-    </footer>
+    <script src="https://unpkg.com/kursor"></script>
+    <script>
+        new kursor({
+            type: 1,
+            removeDefaultCursor: true,
+            color: '#000'
+        })
 
+        const scrollContainer = document.getElementById('scroll-container');
+const scrollbar = document.getElementById('scrollbar');
+const thumb = document.getElementById('thumb');
+
+scrollContainer.addEventListener('scroll', updateThumb);
+
+function updateThumb() {
+  const containerScrollHeight = scrollContainer.scrollHeight;
+  const containerClientHeight = scrollContainer.clientHeight;
+  const scrollableDistance = containerScrollHeight - containerClientHeight;
+  const scrollPercentage = (scrollContainer.scrollTop / scrollableDistance) * 100;
+
+  thumb.style.height = `${scrollPercentage}%`;
+}
+
+scrollbar.addEventListener('click', scrollToPosition);
+
+function scrollToPosition(event) {
+  const clickPosition = event.clientY - scrollbar.getBoundingClientRect().top;
+  const scrollbarHeight = scrollbar.clientHeight;
+  const scrollPercentage = clickPosition / scrollbarHeight;
+  const containerScrollHeight = scrollContainer.scrollHeight;
+  const containerClientHeight = scrollContainer.clientHeight;
+  const scrollableDistance = containerScrollHeight - containerClientHeight;
+  const scrollDistance = scrollableDistance * scrollPercentage;
+
+  scrollContainer.scrollTop = scrollDistance;
+}
+
+// Call updateThumb initially to set the thumb size based on the content
+updateThumb();
+
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
