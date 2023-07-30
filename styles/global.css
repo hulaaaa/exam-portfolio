@@ -1,16 +1,3 @@
 @import './reset.css';
-@import './mobile.css';
 @import './desktop.css';
-html{
-    background: #fefbff;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-a {
-    color: inherit;
-    text-decoration: inherit; /* no underline */
-}
-*{
-    scroll-behavior: smooth;
-
-}
+@import './mobile.css';
