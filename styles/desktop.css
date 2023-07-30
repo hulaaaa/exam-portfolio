@@ -17,11 +17,12 @@ h1.nav-block_heading-text{
     font-weight: 400;
 }
 h1.nav-block_cv-text{
+    cursor: pointer;
     color: #831ED2;
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
 }
 .nav-block_menu{
     display: flex;
@@ -112,7 +113,11 @@ header.header{
     line-height:100%; 
 }
 
-
+hr{
+    width: 100vw;
+    height: 1px;
+    background: rgb(0, 0, 0, 0.10);
+}
 .select-menu{
     display: flex;
     flex-direction: column;
@@ -350,7 +355,7 @@ main.main{
 }
 
 .alertify-notifier {
-    color: white ;
+    color: #fefbff ;
     font-family: Vollkorn;
     font-size: 17px;
     font-style: normal;
@@ -467,5 +472,94 @@ p.menu-close_text{
     font-weight: 400;
 }
 
+#hire-me{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 90px;
+}
+.hire-me_text{
+    color: #000;
+    font-family: Vollkorn;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.hire-me_right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hire-me_right h1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-family: Manrope;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.hire-me_right h1 span{
+    font-weight: 800;
 
+}
+.hire-me_right h1 img{
+    width: 30px;
+}
+#hire-me form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+#hire-me form label{
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+#hire-me form button{
+    cursor: pointer;
+    border: 1px solid #232323;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
+}
+#hire-me form button:hover{
+    background-color: #232323;
+    color: #fefbff;
+}
+#hire-me form textarea,input{
+    width: 30rem;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #232323;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+}
+.bioContact{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.bioContact a {
+    text-decoration: none;
+    color: #232323;
+}
+.bioContact a i{
+    font-size: 30px;
+}

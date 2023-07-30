@@ -6,3 +6,11 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+a {
+    color: inherit;
+    text-decoration: inherit; /* no underline */
+}
+*{
+    scroll-behavior: smooth;
+
+}

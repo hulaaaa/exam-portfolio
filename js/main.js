@@ -146,23 +146,10 @@ for (let item of tabMenu) {
 }
 
 
+
 document.querySelector('.nav-block_cv-text').addEventListener('click',()=>{
-    alertify.set('notifier','delay', 2);
-    alertify.notify('Loading file', 'success');
-    fetchFile('../assets/1.jpg')
+
 })
-function fetchFile(url) {
-    fetch(url).then(res => res.blob()).then(file => {
-        let tempUrl = URL.createObjectURL(file);
-        const aTag = document.createElement("a");
-        aTag.href = tempUrl;
-        aTag.download = url.replace(/^.*[\\\/]/, '');
-        document.body.appendChild(aTag);
-        aTag.click();
-        URL.revokeObjectURL(tempUrl);
-        aTag.remove();
-    })
-}
 let btnCloseMenu = document.querySelector('.menu-close'),
 menuDiv = document.querySelector('.menu');
 btnCloseMenu.addEventListener('click',()=>{

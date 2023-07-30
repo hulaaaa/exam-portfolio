@@ -39,9 +39,42 @@
                 <div class="menu-main_right">
                     <h5 class="menu-main_right-text">Contact info</h5>
                     <div class="menu-main_right-text-div">
-                        <p>Email</p>
-                        <p>Telegram</p>
-                        <p>Website</p>
+                        <p>
+                            <a href="#hire-me" onclick="
+                                setTimeout(() => {
+                                    let menuDiv = document.querySelector('.menu');
+                                    fadeOut(menuDiv, 1);
+                                    document.querySelector('.bio').style.display = 'flex'
+                                },250);
+                                document.querySelector('.kursor').style.border = '2px solid black'
+                                document.querySelector('.kursorChild').style.backgroundColor = 'black'">
+                                Email
+                            </a>
+                        </p>
+                        <p> 
+                            <a target="_blank" href="https://t.me/hula_dm" onclick="
+                                setTimeout(() => {
+                                    let menuDiv = document.querySelector('.menu');
+                                    fadeOut(menuDiv, 1);
+                                    document.querySelector('.bio').style.display = 'flex'
+                                },250);
+                                document.querySelector('.kursor').style.border = '2px solid black'
+                                document.querySelector('.kursorChild').style.backgroundColor = 'black'">
+                                Telegram
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" onclick="
+                            setTimeout(() => {
+                                let menuDiv = document.querySelector('.menu');
+                                fadeOut(menuDiv, 1);
+                                document.querySelector('.bio').style.display = 'flex'
+                            },250);
+                            document.querySelector('.kursor').style.border = '2px solid black'
+                            document.querySelector('.kursorChild').style.backgroundColor = 'black'">
+                            Website
+                        </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -50,15 +83,15 @@
     
         <div class="bio">
             <a href="#">
-                <h1 id="folotext"></h1>
+                <h1 id="folotext">Follow</h1>
             </a>
             <a href="#">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="#">
+            <a target="_blank" href="https://github.com/hulaaaa" >
                 <i class="fa-brands fa-github"></i>
             </a>
-            <a href="#">
+            <a target="_blank" href="https://www.instagram.com/s_hula.dm/" >
                 <i class="fa-brands fa-instagram"></i>
             </a>
         </div>
@@ -70,8 +103,8 @@
                     <h1 class="nav-block_heading-text">.hula</h1>   
                 </a>
     
-                <a href="#" class="nav-block_cv">
-                    <h1 class="nav-block_cv-text">Download CV</h1>   
+                <a href="#hire-me" class="nav-block_cv">
+                    <h1 class="nav-block_cv-text">Hire Me</h1>   
                 </a>
     
                 <div class="nav-block_menu">
@@ -115,7 +148,7 @@
     
     
         <main class="main">
-            <!-- <div class="main-nav">
+            <div class="main-nav">
                 <h1 class="main-nav_text">Filter by Industry:</h1>
                 <div class="main-nav_tabs">
                     <div class="main-nav_tab">
@@ -128,23 +161,63 @@
                         <h1 class="main-nav_tab_text">Funny App</h1>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="main-project">
                 
             </div>
         </main>
-    
+
+
+        <hr>
+        <div id="hire-me">
+            <div class="hire-me_left">
+                <h1 class="hire-me_text">Send Mail Me</h1>
+                <form action="https://formspree.io/f/xyyqkknv" method="POST">
+                    <label>
+                        <input placeholder="Your name" type="text" name="name">
+                    </label>
+                    <label>
+                        <input placeholder="Your email" type="email" name="email">
+                    </label>
+                    <label>
+                        <textarea placeholder="Your message" name="message"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="hire-me_right">
+                <h1>
+                    <span>Location: </span>
+                    Lviv 
+                    <img src="./assets/flagUA.png" alt="UA">
+                </h1>
+                <h1>
+                    <span>Mail: </span>
+                    guladmitro261@gmail.com
+                </h1>
+                <div class="bioContact">
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
     
         <footer class="footer">
             <h1 class="footer-text">Designer & developer by <a href="#">Dm. Hula</a></h1>
         </footer>
     </div>
-    
-      <div class="scrollbar" id="scrollbar">
-        <div class="thumb" id="thumb"></div>
-      </div>
-
-
+    <div class="scrollbar" id="scrollbar">
+      <div class="thumb" id="thumb"></div>
+    </div>
     <script src="https://unpkg.com/kursor"></script>
     <script>
         new kursor({
@@ -152,38 +225,22 @@
             removeDefaultCursor: true,
             color: '#000'
         })
-
         const scrollContainer = document.getElementById('scroll-container');
-const scrollbar = document.getElementById('scrollbar');
-const thumb = document.getElementById('thumb');
+        const scrollbar = document.getElementById('scrollbar');
+        const thumb = document.getElementById('thumb');
 
-scrollContainer.addEventListener('scroll', updateThumb);
+        scrollContainer.addEventListener('scroll', updateThumb);
 
-function updateThumb() {
-  const containerScrollHeight = scrollContainer.scrollHeight;
-  const containerClientHeight = scrollContainer.clientHeight;
-  const scrollableDistance = containerScrollHeight - containerClientHeight;
-  const scrollPercentage = (scrollContainer.scrollTop / scrollableDistance) * 100;
+        function updateThumb() {
+        const containerScrollHeight = scrollContainer.scrollHeight;
+        const containerClientHeight = scrollContainer.clientHeight;
+        const scrollableDistance = containerScrollHeight - containerClientHeight;
+        const scrollPercentage = (scrollContainer.scrollTop / scrollableDistance) * 100;
 
-  thumb.style.height = `${scrollPercentage}%`;
-}
-
-scrollbar.addEventListener('click', scrollToPosition);
-
-function scrollToPosition(event) {
-  const clickPosition = event.clientY - scrollbar.getBoundingClientRect().top;
-  const scrollbarHeight = scrollbar.clientHeight;
-  const scrollPercentage = clickPosition / scrollbarHeight;
-  const containerScrollHeight = scrollContainer.scrollHeight;
-  const containerClientHeight = scrollContainer.clientHeight;
-  const scrollableDistance = containerScrollHeight - containerClientHeight;
-  const scrollDistance = scrollableDistance * scrollPercentage;
-
-  scrollContainer.scrollTop = scrollDistance;
-}
-
-// Call updateThumb initially to set the thumb size based on the content
-updateThumb();
+        thumb.style.height = `${scrollPercentage}%`;
+        }
+        
+        updateThumb();
 
     </script>
     <script src="js/main.js"></script>
