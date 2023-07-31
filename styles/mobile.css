@@ -285,10 +285,9 @@
     }
     .main-project_page img{
         width: 100%;
-        object-fit: cover;
-    
-        height: 300px;
-        background:lightgray 50% / cover no-repeat;
+        object-fit:contain;
+        border-radius: 10px;
+        background:rgba(211, 211, 211, 0.281) 50% / cover no-repeat;
     }
     .main-project_page-text{
         display: flex;

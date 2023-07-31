@@ -3,162 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Eczar:regular,500,600,700,800" rel="stylesheet" />    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Alertify -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+
+    <!-- Animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <!-- Cursor -->
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- my Style -->
     <link rel="stylesheet" href="styles/global.css">
     <title>Portfolio - Hula Dm.</title>
 </head>
 <body>
     <div class="scroll-container" id="scroll-container">
         
-        <div class="loading">
+        <!-- <div class="loading">
             <h1 class="loading-text"></h1>
-        </div>
-    
-    
-        <div class="menu">
-            <div class="menu-close">
-                <p class="menu-close_text">Close</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M3 29L29 3M3 3L29 29" stroke="white" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="menu-main">
-                <div class="menu-main_left">
-                    <h1 class="menu-main_left-text">Talks</h1>
-                    <h1 class="menu-main_left-text">About me</h1>
-                    <h1 class="menu-main_left-text">Community</h1>
-                </div>
-                <div class="menu-main_right">
-                    <h5 class="menu-main_right-text">Contact info</h5>
-                    <div class="menu-main_right-text-div">
-                        <p>
-                            <a href="#hire-me" onclick="
-                                setTimeout(() => {
-                                    let menuDiv = document.querySelector('.menu');
-                                    fadeOut(menuDiv, 1);
-                                    document.querySelector('.bio').style.display = 'flex'
-                                },250);
-                                document.querySelector('.kursor').style.border = '2px solid black'
-                                document.querySelector('.kursorChild').style.backgroundColor = 'black'">
-                                Email
-                            </a>
-                        </p>
-                        <p> 
-                            <a target="_blank" href="https://t.me/hula_dm" onclick="
-                                setTimeout(() => {
-                                    let menuDiv = document.querySelector('.menu');
-                                    fadeOut(menuDiv, 1);
-                                    document.querySelector('.bio').style.display = 'flex'
-                                },250);
-                                document.querySelector('.kursor').style.border = '2px solid black'
-                                document.querySelector('.kursorChild').style.backgroundColor = 'black'">
-                                Telegram
-                            </a>
-                        </p>
-                        <p>
-                            <a href="#" onclick="
-                            setTimeout(() => {
-                                let menuDiv = document.querySelector('.menu');
-                                fadeOut(menuDiv, 1);
-                                document.querySelector('.bio').style.display = 'flex'
-                            },250);
-                            document.querySelector('.kursor').style.border = '2px solid black'
-                            document.querySelector('.kursorChild').style.backgroundColor = 'black'">
-                            Website
-                        </a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    
-        <div class="bio">
-            <a href="#">
-                <h1 id="folotext">Follow</h1>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a target="_blank" href="https://github.com/hulaaaa" >
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a target="_blank" href="https://www.instagram.com/s_hula.dm/" >
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-    
-    
+        </div> -->
+
         <nav class="nav">
             <div class="nav-block">
-                <a href="#" class="nav-block_heading">
-                    <h1 class="nav-block_heading-text">.hula</h1>   
-                </a>
-    
-                <a href="#hire-me" class="nav-block_cv">
-                    <h1 class="nav-block_cv-text">Hire Me</h1>   
-                </a>
-    
-                <div class="nav-block_menu">
-                    <h1 class="nav-block_menu-text">Menu</h1>
-                    <img src="./assets/Icon.svg" alt="d">
+                <div class="nav-menu_left">
+                    <a href="#" class="nav-block_heading">
+                        <h1 class="nav-block_heading-text">.hula</h1>   
+                    </a>
+                    <ul class="nav-block_menu">
+                    
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Work</a>
+                        </li>
+                        <li>
+                            <a href="#">Feedback</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="bio">
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/hulaaaa" >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/s_hula.dm/" >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <!-- <div class="nav-block_menu-mob">
+                    <h1 class="nav-block_menu-mob-text">Menu</h1>
+                    <img src="./assets/Icon.svg" alt="d">
+                </div> -->
             </div>
         </nav>
+        
+        <hr>
     
     
         <header class="header">
             <div class="header-main">
-                <div class="header-main_left">
-                    <div class="header-main_left-head">
-                        <div class="header-main_left-head-line"></div>
-                        <h1 class="header-main_left-head-text">
-                            Hi, I am Dmytro Hula
-                        </h1>
+                <div class="header-main_top">
+                    <div class="header-main_top_textBtn">
+                        <img src="./assets/waving-hand.png" alt="#">
+                        Hello All
                     </div>
-                    <h1 class="header-main_left-headingText">
-                        JS CSS HTML <br> jQuery
+                    <h1 class="header-main_top_text">
+                        I’m Hula Dmytro, <br> A Front-end Developer.
                     </h1>
                 </div>
-                <div class="header-main_right">
-                    <div class="header-main_right-line"></div>
-                    <h1 class="header-main_right-text">I create inclusive, accessible digital products, I have experience in creating web applications. I believe in using product design and development as a tool to improve human interaction with technology at this scale.</h1>
+                <div class="header-main_bot">
+                    <div class="header-main_bot-btnWork">
+                        View My Work
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7929 15.7071C10.4024 15.3166 10.4024 14.6834 10.7929 14.2929L13.0858 12L10.7929 9.70711C10.4024 9.31658 10.4024 8.68342 10.7929 8.29289C11.1834 7.90237 11.8166 7.90237 12.2071 8.29289L14.9229 11.0087C15.4704 11.5562 15.4704 12.4438 14.9229 12.9913L12.2071 15.7071C11.8166 16.0976 11.1834 16.0976 10.7929 15.7071ZM7.75007 2.38782C9.04878 2.0992 10.6243 2 12.5 2C14.3757 2 15.9512 2.0992 17.2499 2.38782C18.56 2.67897 19.6488 3.176 20.4864 4.01358C21.324 4.85116 21.821 5.94002 22.1122 7.25007C22.4008 8.54878 22.5 10.1243 22.5 12C22.5 13.8757 22.4008 15.4512 22.1122 16.7499C21.821 18.06 21.324 19.1488 20.4864 19.9864C19.6488 20.824 18.56 21.321 17.2499 21.6122C15.9512 21.9008 14.3757 22 12.5 22C10.6243 22 9.04878 21.9008 7.75007 21.6122C6.44002 21.321 5.35116 20.824 4.51358 19.9864C3.676 19.1488 3.17897 18.06 2.88782 16.7499C2.5992 15.4512 2.5 13.8757 2.5 12C2.5 10.1243 2.5992 8.54878 2.88782 7.25007C3.17897 5.94002 3.676 4.85116 4.51358 4.01358C5.35116 3.176 6.44002 2.67897 7.75007 2.38782Z" fill="#F3F2FF"/>
+                        </svg>
+                    </div>
+                    <div class="header-main_bot-btnContact">
+                        Contact Me
+                    </div>
                 </div>
             </div>
-            <div class="select-menu">
-                <div class="select-menu_tabs">
-                    <div class="select-menu_tab_actived" id="select-menu_tab">
-                        <h3 id="site">Site</h3>
-                    </div>
-                    <div class="select-menu_tab" id="select-menu_tab">
-                        <h3 id="web">Web Application</h3>
-                    </div>
-                </div>
-                <hr>
+            <div class="header-img">
+                <img src="./assets/myPhoto.png" alt="#">
             </div>
         </header>
     
     
         <main class="main">
             <div class="main-nav">
-                <h1 class="main-nav_text">Filter by Industry:</h1>
+                <h1 class="main-nav_text">Featured Work</h1>
                 <div class="main-nav_tabs">
                     <div class="main-nav_tab">
-                        <h1 class="main-nav_tab_text">Fintech</h1>
+                        <h1 class="main-nav_tab_text">Site</h1>
                     </div>
                     <div class="main-nav_tab">
-                        <h1 class="main-nav_tab_text">Edutech</h1>
-                    </div>
-                    <div class="main-nav_tab">
-                        <h1 class="main-nav_tab_text">Funny App</h1>
+                        <h1 class="main-nav_tab_text">Web App</h1>
                     </div>
                 </div>
             </div>
@@ -167,15 +122,64 @@
             </div>
         </main>
 
+        <!--
+        <hr>
+
+        <div class="education">
+            <h1 class="hire-me_text">Education</h1>
+            <ul id="my-accordion" class="accordionjs">
+                <li>
+                    <div><img id="accordionLogo" src="./assets/Gerb_uad.jpg" alt="a"> Ukrainian Academy of Printing</div>
+                    <div>
+                        <p>
+                            From 2022, I study at UAD on the "Information system and technology" faculty.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div><img id="accordionLogo" src="./assets/flagStep.jpg" alt="a">IT Step Academy - C++</div>
+                    <div>
+                        <p>
+                            From 2020, I study at IT Step Academy on the programing course.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div><img src="./assets/flagStep.jpg" id="accordionLogo" alt="a">IT Step Academy - Front end</div>
+                    <div>
+                        <p>
+                            From 2022, I study at IT Step Academy on the Front-End course.
+                        </p>
+                    </div>
+                </li>
+                
+                <li>
+                    <div><img src="./assets/flagHarvard.png" id="accordionLogo" alt="a">Harvard CS50</div>
+                    <div>
+                        <p>
+                            "CS50" is a programming course from Harvard University, which is considered the best computer literacy course in the world.
+                        </p>
+                    </div>
+                </li>
+            
+            </ul>
+        </div>
+ -->
 
         <hr>
         <div id="hire-me">
             <div class="hire-me_left">
-                <h1 class="hire-me_text">Send Mail Me</h1>
+                <h1 class="hire-me_text">Let’s work together</h1>
                 <form action="https://formspree.io/f/xyyqkknv" method="POST">
-                    <label>
-                        <input placeholder="Your name" type="text" name="name">
-                    </label>
+                    <div class="div_name">
+                        <label>
+                            <input placeholder="First name" type="text" name="name">
+                        </label>
+                        <label>
+                            <input placeholder="Last name" type="text" name="name">
+                        </label>
+                    </div>
+                   
                     <label>
                         <input placeholder="Your email" type="email" name="email">
                     </label>
@@ -185,7 +189,7 @@
                     <button type="submit">Send</button>
                 </form>
             </div>
-            <div class="hire-me_right">
+            <!-- <div class="hire-me_right">
                 <h1>
                     <span>Location: </span>
                     Lviv 
@@ -206,9 +210,9 @@
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
-            </div>
+            </div> -->
             
-        </div>
+        </div> 
 
     
         <footer class="footer">
@@ -219,6 +223,7 @@
       <div class="thumb" id="thumb"></div>
     </div>
     <script src="https://unpkg.com/kursor"></script>
+    <script src="./lib/accordion.min.js"></script>
     <script>
         new kursor({
             type: 1,
@@ -241,7 +246,9 @@
         }
         
         updateThumb();
-
+        jQuery(document).ready(function($){
+            $("#my-accordion").accordionjs();
+        });
     </script>
     <script src="js/main.js"></script>
 </body>

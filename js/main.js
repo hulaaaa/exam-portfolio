@@ -8,20 +8,20 @@ const arrProject = {
         [
             '../assets/6.jpg',
             'Nike Clone Website',
-            'lorem',
-            'Develop Web'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ],
         [
             '../assets/7.jpg',
             'Paris Website',
-            'lorem',
-            'Develop Web'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ],
         [
             '../assets/5.jpg',
             'Travel Website',
-            'lorem',
-            'Develop Web'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ]
     ],
     web:[
@@ -33,25 +33,25 @@ const arrProject = {
         [
             '../assets/1.jpg',
             'Weather App',
-            'Search weather in your city',
-            'Web Application'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ],
         [
             '../assets/2.jpg',
             'Music App',
-            'Listen your favorite music',
-            'Web Application'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ],
         [
             '../assets/3.jpg',
             'Todo List App',
-            'Just notation your plan',
-            'Web Application'
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad assumenda, consequatur ab quam, maiores ipsum quod modi corporis consectetur animi, doloremque sint facere fugiat sunt saepe est rerum id!',
+            'Live View'
         ]
     ]
 }
 let divMain = document.querySelector('.main-project');
-let tabMenu = document.querySelectorAll('#select-menu_tab');
+
 let loadingText = document.querySelector('.loading-text')
 function fadeOut(element, opacity) {
     if (opacity <= 0) {
@@ -62,7 +62,7 @@ function fadeOut(element, opacity) {
         element.style.opacity = opacity;
         setTimeout(() => {
             fadeOut(element, opacity - 0.01);
-        }, 4);
+        }, 3);
     }
 }
 function fadeIn(element, opacity) {
@@ -76,26 +76,26 @@ function fadeIn(element, opacity) {
         element.style.opacity = opacity;
         setTimeout(() => {
             fadeIn(element, opacity + 0.01);
-        }, 4);
+        }, 3);
     }
 }
 
 window.onload = () =>{
-    loadingPage();
-    setTimeout(() => {
-        const loadingDiv = document.querySelector('.loading');
-        fadeOut(loadingDiv, 1);
-    },1800);
+    // loadingPage();
+    // setTimeout(() => {
+    //     const loadingDiv = document.querySelector('.loading');
+    //     fadeOut(loadingDiv, 1);
+    // },1500);
     renderProject(arrProject.site)
 }
-function loadingPage() {
-    document.querySelector('.bio').style.display = 'none'
-    gsap.to(loadingText , { 
-        duration: 2, 
-        text: "Hi, I'm Hula",
-        ease: 'none'
-    });
-}
+// function loadingPage() {
+//     document.querySelector('.bio').style.display = 'none'
+//     gsap.to(loadingText , { 
+//         duration: 2, 
+//         text: "Hi, I'm Hula",
+//         ease: 'none'
+//     });
+// }
 function renderProject(arrT) {
     divMain.innerHTML = ``
     const siteArray = arrT;
@@ -123,54 +123,58 @@ function renderProject(arrT) {
         </div>`
     }
 }
-for (let item of tabMenu) {
-    item.addEventListener('click',(e)=>{
-        if(e.target.innerText == 'Site') {
+// Отримуємо усі вкладки та їх дочірні елементи
+const tabs = document.querySelectorAll('.main-nav_tab');
+const tabTexts = document.querySelectorAll('.main-nav_tab_text');
+
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', (e) => {
+        // Видаляємо клас активності з усіх вкладок перед зміною активної вкладки
+        for (const tab of tabs) {
+            tab.classList.remove('main-nav_tab_active');
+        }
+
+        // Видаляємо клас активності з усіх дочірніх елементів перед зміною активної вкладки
+        for (const text of tabTexts) {
+            text.classList.remove('main-nav_tab_text_active');
+        }
+
+        // Додаємо клас активності до поточної вкладки та її дочірнього елемента
+        tabs[i].classList.add('main-nav_tab_active');
+        tabTexts[i].classList.add('main-nav_tab_text_active');
+
+        // Виконуємо потрібні дії, пов'язані зі зміною вкладки (наприклад, рендер контенту)
+        if (e.target.innerText === 'Site') {
             renderProject(arrProject.site);
-            tabMenu[0].className = ``
-            tabMenu[0].className = 'select-menu_tab_actived'
-            tabMenu[1].className = ``
-            tabMenu[1].className = 'select-menu_tab'
+        } else if (e.target.innerText === 'Web App') {
+            renderProject(arrProject.web);
         }
-
-
-        if(e.target.innerText == 'Web Application') {
-            renderProject(arrProject.web)
-            
-            tabMenu[0].className = ``
-            tabMenu[0].className = 'select-menu_tab'
-            tabMenu[1].className = ``
-            tabMenu[1].className = 'select-menu_tab_actived'
-        }
-    })
+    });
 }
 
 
 
-document.querySelector('.nav-block_cv-text').addEventListener('click',()=>{
 
-})
-let btnCloseMenu = document.querySelector('.menu-close'),
-menuDiv = document.querySelector('.menu');
-btnCloseMenu.addEventListener('click',()=>{
-    setTimeout(() => {
-        let menuDiv = document.querySelector('.menu');
-        fadeOut(menuDiv, 1);
-        document.querySelector('.bio').style.display = 'flex'
-    },250);
+
+
+
+// let btnCloseMenu = document.querySelector('.menu-close'),
+// menuDiv = document.querySelector('.menu');
+// btnCloseMenu.addEventListener('click',()=>{
+//     let menuDiv = document.querySelector('.menu');
+//         fadeOut(menuDiv, 1);
+//         document.querySelector('.bio').style.display = 'flex'
     
-    document.querySelector('.kursor').style.border = '2px solid black'
-    document.querySelector('.kursorChild').style.backgroundColor = 'black'
+//     document.querySelector('.kursor').style.border = '2px solid black'
+//     document.querySelector('.kursorChild').style.backgroundColor = 'black'
 
-})
-let openMenu = document.querySelector('.nav-block_menu')
-openMenu.addEventListener('click',()=>{
-    setTimeout(() => {
-        let menuDiv = document.querySelector('.menu');
-        fadeIn(menuDiv, 0);
-    },250);
+// })
+// let openMenu = document.querySelector('.nav-block_menu')
+// openMenu.addEventListener('click',()=>{
+//     let menuDiv = document.querySelector('.menu');
+//         fadeIn(menuDiv, 0);
 
-})
+// })
 
 
 
