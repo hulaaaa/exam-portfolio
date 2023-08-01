@@ -177,7 +177,15 @@ for (let i = 0; i < tabs.length; i++) {
 // })
 
 
-
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 2,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+});
 
 
 
