@@ -91,7 +91,7 @@ legend {
 
 html{
   background: #fefbff;
-  overflow-x: hidden;
+  overflow-x:hidden;
   scroll-behavior: smooth;
 }
 a {
@@ -105,6 +105,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  overflow-x:hidden;
 }
   
 .scroll-container {
